@@ -22,12 +22,12 @@ def add_emp():
         cursor.execute(q.format(id, name, sal, age))
         con.commit()
         print("Data Inserted.")
-    
+
 def show_emp():
     cursor.execute('select * from employee')
     for x in cursor.fetchall():
         print(x)
-        
+
 
 def update_emp():
     id = int(input("Enter Employee ID: "))
@@ -59,7 +59,7 @@ def del_emp():
                 break
             else:
                 exit()
-    
+
     else:
         print("Employee Not Found")
 
